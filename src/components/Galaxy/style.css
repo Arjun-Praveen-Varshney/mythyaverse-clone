@@ -1,0 +1,15 @@
+.canvas-container {
+  display: inline-block;
+  width: 50%;
+  height: 600px;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.galaxy-canvas {
+  padding: 1rem;
+}
+
+.galaxy-canvas canvas {
+  margin: auto;
+}

@@ -1,0 +1,13 @@
+.prev-slide {
+  transform: translateX(14rem) scale(0.75) perspective(1500px) rotateY(15deg);
+}
+
+.next-slide {
+  transform: translateX(-14rem) scale(0.75) perspective(1500px) rotateY(-15deg);
+}
+
+.prev-slide,
+.next-slide {
+  opacity: 50%;
+  z-index: -10;
+}

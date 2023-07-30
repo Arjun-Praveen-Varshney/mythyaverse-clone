@@ -1,0 +1,151 @@
+.example-mark {
+  width: 12px;
+  height: 12px;
+  border: 2px solid black;
+  border-style: outset;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0px calc(19px);
+  bottom: calc(50% - 6px);
+}
+
+.example-mark.example-mark-active {
+  border: 2px solid #de77c7;
+  background-color: rgb(255, 255, 255);
+}
+
+.example-thumb {
+  font-size: 0.9em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.example-thumb.active {
+  background-color: grey;
+}
+
+.example-track {
+  position: relative;
+  background: #ddd;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.example-track.example-track-0 {
+  background: #de77c7;
+}
+
+.vertical-slider .example-thumb {
+  left: 1px;
+  width: 48px;
+  line-height: 40px;
+  height: 50px;
+}
+
+.vertical-slider .example-track {
+  left: 23px;
+  width: 3px;
+}
+
+.horizontal-slider .example-thumb {
+  top: 1px;
+  height: 48px;
+  line-height: 40px;
+  width: 50px;
+}
+
+.vertical-slider .example-mark:nth-of-type(1) {
+  top: 5px !important;
+}
+
+.vertical-slider .example-mark:nth-of-type(2) {
+  top: 95px !important;
+}
+
+.vertical-slider .example-mark:nth-of-type(3) {
+  top: 185px !important;
+}
+
+.vertical-slider .example-mark:nth-of-type(4) {
+  top: 273px !important;
+}
+
+.vertical-slider .example-mark:nth-of-type(5) {
+  top: 360px !important;
+}
+
+.horizontal-slider .example-track {
+  top: 23px;
+  height: 3px;
+  width: 100%;
+}
+
+.horizontal-slider .example-track:nth-of-type(2) {
+  width: 70%;
+}
+
+.horizontal-slider .example-mark {
+  margin-bottom: 20px;
+}
+
+.horizontal-slider .example-mark:nth-of-type(1) {
+  left: 0.25% !important;
+}
+
+.horizontal-slider .example-mark:nth-of-type(2) {
+  left: 32.5% !important;
+}
+
+.horizontal-slider .example-mark:nth-of-type(3) {
+  left: 64.6% !important;
+}
+
+.horizontal-slider .example-mark:nth-of-type(4) {
+  left: 96.2% !important;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.sm-inactive {
+  height: 0;
+  opacity: 0;
+}
+
+.sm-active {
+  height: auto;
+  opacity: 1;
+}
+
+.vertical-slider .sm-open:nth-of-type(2) {
+  top: 40px !important;
+}
+
+.vertical-slider .sm-open:nth-of-type(3) {
+  top: 330px !important;
+}
+
+.vertical-slider .sm-open-track.example-track-0 {
+  bottom: 330px !important;
+}
+
+.vertical-slider .sm-open-track.example-track-1 {
+  top: 40px !important;
+}

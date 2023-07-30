@@ -1,0 +1,112 @@
+[
+    {
+      "results": [
+        "7.5 out of 10",
+        {
+          "Technical Skills": [
+            {
+              "Skill": "Blockchain Platforms",
+              "Proficiency": 10,
+              "items": ["Hyperledger Fabric", "Ethereum", "Corda", "Multichain", "Bitcoin"]
+            },
+            {
+              "Skill": "AR / VR platforms",
+              "Proficiency": 8,
+              "items": ["Unity", "Unreal"]
+            },
+            {
+              "Skill": "Programming Languages",
+              "Proficiency": 9,
+              "items": ["C/C++", "Solidity", "Node.JS"]
+            },
+            {
+              "Skill": "Framework",
+              "Proficiency": 8,
+              "items": ["Truffle", "REST API", "Web3.Js"]
+            },
+            {
+              "Skill": "Automation Tools",
+              "Proficiency": 9,
+              "items": ["Automation Anywhere", "Ansible", "Watson Discovery", "Watson Assistant"]
+            },
+            {
+              "Skill": "Cloud Platforms",
+              "Proficiency": 9,
+              "items": ["IBM Cloud", "Google Cloud", "AWS", "Azure"]
+            }
+          ],
+          "Professional Skills": [
+            {
+              "Skill": "Project Management",
+              "Proficiency": 10
+            },
+            {
+              "Skill": "Team Leadership",
+              "Proficiency": 10
+            },
+            {
+              "Skill": "Blockchain and Automation Leadership",
+              "Proficiency": 10
+            }
+          ],
+          "Languages": [
+            {
+              "Language": "English",
+              "Proficiency": 10
+            },
+            {
+              "Language": "Hindi",
+              "Proficiency": 7
+            }
+          ]
+        },
+        {
+          "Name": "Anuj Garg",
+          "Education": {
+            "UG": {
+              "Year": "2023",
+              "Degree": "B.Tech. (Production and Industrial Engineering)",
+              "Institution": "Indian Institute of Technology, Roorkee",
+              "CGPA": "7.523"
+            },
+            "Intermediate": {
+              "Year": "2020",
+              "Institution": "Raath International School , Alwar",
+              "Percentage": "91.60 %"
+            },
+            "Matriculate": {
+              "Year": "2018",
+              "Institution": "Raath International School , Alwar",
+              "Percentage": "94.80 %"
+            }
+          },          
+            "Certifications": [
+              "PMP Certified",
+              "IBM Certified Blockchain Architect",
+              "IBM Certified Blockchain Consultant",
+              "IBM Certified Blockchain Developer",
+              "Certified Blockchain Professional from GSDC",
+              "IBM Certified Automation Practitioner",
+              "IBM Academic Ambassador Advocate",
+              "IBM Recognized speaker/presenter",
+              "IBM Data Science Foundation / Quantum Conversations",
+              "IBM Certified Advisory Project Manager"
+            ]
+          ,
+          "Location": "150 New Gandhi Nagar, Ghaziabad (UP) India",
+          "Contact": {
+            "Email": "garg.anuj@gmail.com",
+            "Phone": "+91-9717501144",
+            "LinkedIn": "https://www.linkedin.com/in/anujkgarg/"
+          },
+          "Current Position": {
+            "Company": "Zebpay Delhi, India",
+            "Role": "Vice President - Blockchain",
+            "Start Date": "Feb 2022",
+            "End Date": "Till Date"
+          }
+        }
+      ]
+    }
+  ]
+  
