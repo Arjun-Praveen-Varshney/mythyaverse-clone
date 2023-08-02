@@ -1,35 +1,44 @@
 import { useState } from "react";
-import { useDropzone } from "react-dropzone";
+// import { useDropzone } from "react-dropzone";
 
 export default function ResumeAnalyser() {
-  const [JobDescription, setJobDescription] = useState({});
-  const [Resume, setResume] = useState({});
+  // const [JobDescription, setJobDescription] = useState({});
+  // const [Resume, setResume] = useState({});
+  const [JobDescription, setJobDescription] = useState("");
+  const [Resume, setResume] = useState("");
   const [similarityScore, setSimilarityScore] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const { getRootProps: getJDRootProps, getInputProps: getJDInputProps } =
-    useDropzone({
-      accept: "application/pdf",
-      onDrop: (acceptedFile) => {
-        setJobDescription(
-          Object.assign(acceptedFile[0], {
-            preview: URL.createObjectURL(acceptedFile[0]),
-          })
-        );
-      },
-    });
+  const handleChange = (e) => {
+    if (e.target.name === "resume") {
+      setResume(e.target.files[0]);
+    } else if (e.target.name === "job_description") {
+      setJobDescription(e.target.files[0]);
+    }
+  };
+  // const { getRootProps: getJDRootProps, getInputProps: getJDInputProps } =
+  //   useDropzone({
+  //     accept: "application/pdf",
+  //     onDrop: (acceptedFile) => {
+  //       setJobDescription(
+  //         Object.assign(acceptedFile[0], {
+  //           preview: URL.createObjectURL(acceptedFile[0]),
+  //         })
+  //       );
+  //     },
+  //   });
 
-  const { getRootProps: getRSRootProps, getInputProps: getRSInputProps } =
-    useDropzone({
-      accept: "application/pdf",
-      onDrop: (acceptedFile) => {
-        setResume(
-          Object.assign(acceptedFile[0], {
-            preview: URL.createObjectURL(acceptedFile[0]),
-          })
-        );
-      },
-    });
+  // const { getRootProps: getRSRootProps, getInputProps: getRSInputProps } =
+  //   useDropzone({
+  //     accept: "application/pdf",
+  //     onDrop: (acceptedFile) => {
+  //       setResume(
+  //         Object.assign(acceptedFile[0], {
+  //           preview: URL.createObjectURL(acceptedFile[0]),
+  //         })
+  //       );
+  //     },
+  //   });
   const handleSubmit = (e) => {
     e.preventDefault();
     setSimilarityScore(null);
@@ -37,7 +46,7 @@ export default function ResumeAnalyser() {
     const data = new FormData();
     data.append("job_description", JobDescription);
     data.append("resume", Resume);
-    fetch("https://resume-analyzer-lsvuo7rsnq-uc.a.run.app/api/analyze", {
+    fetch("https://resume-analyzer.azurewebsites.net/api/analyze", {
       method: "POST",
       body: data,
     }).then(
@@ -71,15 +80,15 @@ export default function ResumeAnalyser() {
           <span className="text-purple-400 font-semibold">job description</span>{" "}
           here:
         </h2>
-        <div class="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-full">
           <label
-            for="dropzone-jd-file"
-            class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100"
-            {...getJDRootProps()}
+            htmlFor="dropzone-jd-file"
+            className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100"
+            // {...getJDRootProps()}
           >
-            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <div className="flex flex-col items-center justify-center pt-5 pb-6">
               <svg
-                class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -87,25 +96,26 @@ export default function ResumeAnalyser() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                 />
               </svg>
-              <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                {JobDescription.path
-                  ? JobDescription.path
+              <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                {JobDescription
+                  ? JobDescription.name
                   : "Click to upload or drag and drop"}
               </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">PDF</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">PDF</p>
             </div>
             <input
+              onChange={handleChange}
               id="dropzone-jd-file"
               type="file"
-              class="hidden"
+              className="hidden"
               name="job_description"
-              {...getJDInputProps()}
+              // {...getJDInputProps()}
             />
           </label>
         </div>
@@ -114,15 +124,15 @@ export default function ResumeAnalyser() {
           Upload your{" "}
           <span className="text-purple-400 font-semibold">resume</span> here:
         </h2>
-        <div class="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-full">
           <label
-            for="dropzone-resume-file"
-            class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100"
-            {...getRSRootProps()}
+            htmlFor="dropzone-resume-file"
+            className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100"
+            // {...getRSRootProps()}
           >
-            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <div className="flex flex-col items-center justify-center pt-5 pb-6">
               <svg
-                class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -130,23 +140,24 @@ export default function ResumeAnalyser() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                 />
               </svg>
-              <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                {Resume.path ? Resume.path : "Click to upload or drag and drop"}
+              <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                {Resume ? Resume.name : "Click to upload or drag and drop"}
               </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">PDF</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">PDF</p>
             </div>
             <input
+              onChange={handleChange}
               id="dropzone-resume-file"
               type="file"
-              class="hidden"
+              className="hidden"
               name="resume"
-              {...getRSInputProps()}
+              // {...getRSInputProps()}
             />
           </label>
         </div>

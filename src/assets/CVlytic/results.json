@@ -1,112 +1,198 @@
-[
-    {
-      "results": [
-        "7.5 out of 10",
-        {
-          "Technical Skills": [
-            {
-              "Skill": "Blockchain Platforms",
-              "Proficiency": 10,
-              "items": ["Hyperledger Fabric", "Ethereum", "Corda", "Multichain", "Bitcoin"]
-            },
-            {
-              "Skill": "AR / VR platforms",
-              "Proficiency": 8,
-              "items": ["Unity", "Unreal"]
-            },
-            {
-              "Skill": "Programming Languages",
-              "Proficiency": 9,
-              "items": ["C/C++", "Solidity", "Node.JS"]
-            },
-            {
-              "Skill": "Framework",
-              "Proficiency": 8,
-              "items": ["Truffle", "REST API", "Web3.Js"]
-            },
-            {
-              "Skill": "Automation Tools",
-              "Proficiency": 9,
-              "items": ["Automation Anywhere", "Ansible", "Watson Discovery", "Watson Assistant"]
-            },
-            {
-              "Skill": "Cloud Platforms",
-              "Proficiency": 9,
-              "items": ["IBM Cloud", "Google Cloud", "AWS", "Azure"]
-            }
-          ],
-          "Professional Skills": [
-            {
-              "Skill": "Project Management",
-              "Proficiency": 10
-            },
-            {
-              "Skill": "Team Leadership",
-              "Proficiency": 10
-            },
-            {
-              "Skill": "Blockchain and Automation Leadership",
-              "Proficiency": 10
-            }
-          ],
-          "Languages": [
-            {
-              "Language": "English",
-              "Proficiency": 10
-            },
-            {
-              "Language": "Hindi",
-              "Proficiency": 7
-            }
-          ]
-        },
-        {
-          "Name": "Anuj Garg",
-          "Education": {
-            "UG": {
-              "Year": "2023",
-              "Degree": "B.Tech. (Production and Industrial Engineering)",
-              "Institution": "Indian Institute of Technology, Roorkee",
-              "CGPA": "7.523"
-            },
-            "Intermediate": {
-              "Year": "2020",
-              "Institution": "Raath International School , Alwar",
-              "Percentage": "91.60 %"
-            },
-            "Matriculate": {
-              "Year": "2018",
-              "Institution": "Raath International School , Alwar",
-              "Percentage": "94.80 %"
-            }
-          },          
-            "Certifications": [
-              "PMP Certified",
-              "IBM Certified Blockchain Architect",
-              "IBM Certified Blockchain Consultant",
-              "IBM Certified Blockchain Developer",
-              "Certified Blockchain Professional from GSDC",
-              "IBM Certified Automation Practitioner",
-              "IBM Academic Ambassador Advocate",
-              "IBM Recognized speaker/presenter",
-              "IBM Data Science Foundation / Quantum Conversations",
-              "IBM Certified Advisory Project Manager"
-            ]
-          ,
-          "Location": "150 New Gandhi Nagar, Ghaziabad (UP) India",
-          "Contact": {
-            "Email": "garg.anuj@gmail.com",
-            "Phone": "+91-9717501144",
-            "LinkedIn": "https://www.linkedin.com/in/anujkgarg/"
-          },
-          "Current Position": {
-            "Company": "Zebpay Delhi, India",
-            "Role": "Vice President - Blockchain",
-            "Start Date": "Feb 2022",
-            "End Date": "Till Date"
-          }
-        }
-      ]
+{
+  "education": {
+    "Education": [
+      {
+        "Degree": "Double PhD",
+        "Institution": "RuG Netherlands & IIT Roorkee",
+        "Year": "2018–Now"
+      },
+      {
+        "Degree": "M.Tech",
+        "Institution": "NIT Hamirpur",
+        "Year": "2014–2016"
+      },
+      {
+        "Degree": "B.Tech",
+        "Institution": "NIT Uttarakhand",
+        "Year": "2010–2014"
+      },
+      {
+        "Degree": "SSC",
+        "Institution": "SJBSVM Mathura",
+        "Year": "2009–2010"
+      },
+      {
+        "Degree": "HSC",
+        "Institution": "SJBSVM Mathura",
+        "Year": "2007–2008"
+      }
+    ]
+  },
+  "experience": {
+    "Work Experience": [
+      {
+        "Job Title": "Research Scholar",
+        "Company": "University of Groningen, Netherlands and Indian Institute of Technology Roorkee, India",
+        "Dates": "2018–Now",
+        "Description": "Working on elucidating the mechanisms behind Depression, be it behavioural, cognitive or electrophysiological under the supervision of Dr. Partha Pratim Roy, Dr. M.K. Van Vugt and Dr. Niels Taatgen. The research areas includes Computational Cognitive Neuroscience, Deep Learning and Computational Modelling."
+      },
+      {
+        "Job Title": "Intern",
+        "Company": "University of Groningen, Netherlands",
+        "Dates": "2021",
+        "Description": "Collected EEG data of 27 participants doing guided focused attention meditation. Building a classifier to discriminate different attention conditions using Function Connectivity and Graph Neural Networks."
+      },
+      {
+        "Job Title": "Intern",
+        "Company": "DRDO",
+        "Dates": "2019",
+        "Description": "Collected EEG data of 27 Depressed patients from KGM hospital, Karnal. Identified changes in brain connectivity patterns of Depressed Patients pre-and-post meditation."
+      },
+      {
+        "Job Title": "Intern",
+        "Company": "IIT Mandi",
+        "Dates": "2019",
+        "Description": "Proposed cognitive models like PyIBL as an alternative approach to reinforcement learning. Did a comparison of PyIBL and Q-Learning on Frozen Lake environment from OpenAI gym."
+      },
+      {
+        "Job Title": "Research Visitor",
+        "Company": "Osaka Prefecture University, Japan",
+        "Dates": "2018",
+        "Description": "Visited Osaka Prefecture University, Japan under the financial support of JST Sakura Science Plan to have technical discussions in the areas of brain computer interface and deep learning."
+      },
+      {
+        "Job Title": "Teaching Assistant",
+        "Company": "IIT Roorkee",
+        "Dates": "2018 and 2019",
+        "Description": "Took Labs in the Machine Learning and AI workshops organized by EICT at IIT Roorkee."
+      },
+      {
+        "Job Title": "Teaching Assistant",
+        "Company": "IIT Roorkee",
+        "Dates": "Spring semester",
+        "Description": "TA for Machine Learning (B.Tech. 3rd year) in the spring semester at IIT Roorkee."
+      }
+    ]
+  },
+  "extra_info": {
+    "Languages": [],
+    "Certifications": [
+      {
+        "Certification": "Advance Machine Learning",
+        "Issuing Organization": "",
+        "Date": ""
+      },
+      {
+        "Certification": "AI for Medicine",
+        "Issuing Organization": "",
+        "Date": ""
+      }
+    ],
+    "Extracurricular Activities": [
+      {
+        "Activity": "Reviewer for Nature Scientific Reports, Springer Nature Computer Science, IET Biometrics"
+      },
+      {
+        "Activity": "Content Editor for ConvNets and Recurrent Neural Networks at Neuromatch 2021"
+      },
+      {
+        "Activity": "Education Mentor and Alpha Tester for DeepLearning.ai at Coursera 2020"
+      },
+      {
+        "Activity": "Taught English to village kids at Evidyaloka 2019"
+      }
+    ]
+  },
+  "personal_info": {
+    "Name": "ANMOL GUPTA",
+    "Contact Information": {
+      "Email": [
+        "agupta@cs.iitr.ac.in",
+        "a.gupta@rug.nl",
+        "bratanmol@gmail.com"
+      ],
+      "Phone": "+917400-257-640",
+      "Address": "3218/224,Sector-1,KaneNagar,AntopHill,Mumbai,400037",
+      "LinkedIn": "linkedin.com/in/anmolscd"
+    },
+    "Summary": "Pursuing double Ph.D. at University of Groningen, Netherlands and Indian Institute of Technology Roorkee, India. Working on elucidating the mechanisms behind Depression, be it behavioural, cognitive or electrophysiological under the supervision of Dr. Partha Pratim Roy, Dr. M.K. Van Vugt and Dr. Niels Taatgen. The research areas includes Computational Cognitive Neuroscience, Deep Learning and Computational Modelling."
+  },
+  "publications": {
+    "Publications": [
+      {
+        "Title": "Subject-Specific Cognitive Workload Classification Using EEG-Based Functional Connectivity and Deep Learning",
+        "Publication": "MDPI Sensors",
+        "Date": "2021"
+      },
+      {
+        "Title": "Evaluation of Instance-based Learning and Q-learning algorithms in dynamic environments",
+        "Publication": "IEEE Access",
+        "Date": "2021"
+      },
+      {
+        "Title": "Eeg-based age and gender prediction using deep blstm-lstm network model",
+        "Publication": "IEEE Sensor Letters",
+        "Date": "2018"
+      }
+    ]
+  },
+  "score": {
+    "score": 7.5,
+    "feedback": {
+      "matches": {
+        "education": "The candidate has a strong educational background in technology and has pursued a double Ph.D. which shows a high level of commitment and expertise.",
+        "skills": "The candidate has demonstrated skills in Python and deep learning frameworks like Tensorflow and PyTorch, which are required for the job. The candidate also has experience with machine learning, as demonstrated by the projects and research work.",
+        "experience": "The candidate has a wide range of experience in research and has worked on projects that involve deep learning and computational modeling. The candidate also has teaching experience in deep learning and machine learning."
+      },
+      "mismatches": {
+        "experience": "The candidate does not seem to have specific experience as a Machine Learning Engineer, which is a requirement for the job. The candidate's experience is more in research and academia, not specifically in designing and implementing machine learning systems in a business or product context.",
+        "skills": "The job description requires the ability to write robust code in Java and R, but the candidate has not mentioned these skills in the resume."
+      },
+      "improvements": {
+        "experience": "The candidate should highlight any experience in designing and implementing machine learning systems, even if it was part of a research project or an internship. If the candidate has experience in a business or product context, it should be clearly stated.",
+        "skills": "The candidate should mention any experience with Java and R, even if it's not as strong as their Python skills. If the candidate does not have these skills, they should consider learning them to increase their job prospects.",
+        "presentation": "The resume could be improved by making it more concise and focused. It currently includes a lot of information, some of which might not be relevant to the job. The candidate should focus on the most relevant skills, experiences, and accomplishments."
+      }
     }
-  ]
-  
+  },
+  "skills": {
+    "Skills": [
+      {
+        "Skill": "Python",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "C++",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "Tensorflow",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "PyTorch",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "jupyterlab",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "git",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "docker",
+        "Proficiency": "Intermediate"
+      },
+      {
+        "Skill": "Advance Machine Learning",
+        "Proficiency": "Expert"
+      },
+      {
+        "Skill": "AI for Medicine",
+        "Proficiency": "Expert"
+      }
+    ]
+  }
+}

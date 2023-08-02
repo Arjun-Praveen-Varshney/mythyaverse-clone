@@ -95,15 +95,15 @@ const Circle = ({ gotoNextSlide, gotoPrevSlide, className }) => {
     <div
       className={`${className} absolute bottom-[13rem] left-1/2 -translate-x-1/2`}
     >
-      <div class="wrap">
-        <div class="slider-container">
+      <div className="wrap">
+        <div className="slider-container">
           <input id="range" type="range" min="1" max="100" ref={rangeEl} />
           <svg id="slider" height="100" width="450">
             <circle id="thumb" stroke="#fff" fill="#fff" r="10" ref={thumbEl} />
             <path
               id="curve"
               stroke="#fff"
-              stroke-width="4"
+              strokeWidth="4"
               fill="none"
               ref={curveEl}
             />

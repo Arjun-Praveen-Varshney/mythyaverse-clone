@@ -204,8 +204,8 @@ export default function ContentPage() {
         </div>
       </main>
 
-      <div class="mousey mb-4">
-        <div class="scroller"></div>
+      <div className="mousey mb-4">
+        <div className="scroller"></div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import {
 import {
   Dashboard,
   Analytics as DashboardAnalytics,
+  Profile as DashboardProfile,
   Home as DashboardHome,
 } from "./pages/CVlytic/Dashboard";
 import ContentPage from "./pages/Content";
@@ -99,6 +100,11 @@ export default function App() {
               path="/cvlytic/analytics"
               exact
               element={<DashboardAnalytics />}
+            />
+            <Route
+              path="/cvlytic/profile"
+              exact
+              element={<DashboardProfile />}
             />
           </Route>
         </Routes>

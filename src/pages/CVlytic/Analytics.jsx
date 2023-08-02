@@ -93,10 +93,10 @@ export default function Analytics() {
               {Object.keys(skills).map((key) => {
                 let outputString = convertToTitleCase(key);
                 return (
-                  <Tab class="mr-2" key={key}>
+                  <Tab className="mr-2" key={key}>
                     <a
                       href="#"
-                      class="inline-block px-4 py-3 text-white bg-[#1e1e1e] rounded-full active"
+                      className="inline-block px-4 py-3 text-white bg-[#1e1e1e] rounded-full active"
                       aria-current="page"
                     >
                       {outputString}
@@ -111,7 +111,7 @@ export default function Analytics() {
                   Skills
                 </span>
                 <div className="bg-[#303030] p-4 rounded-lg text-center">
-                  <div className="text-left">{skills.technical_skill.name}</div>
+                  {/* <div className="text-left">{skills.technical_skill.name}</div> */}
                 </div>
               </div>
               <div className="w-1/2 flex flex-col">
@@ -120,7 +120,7 @@ export default function Analytics() {
                   Proficiency Score
                 </span>
                 <div className="bg-transparent rounded-lg text-left max-h-[95%] overflow-y-auto">
-                  <ul>{skills.technical_skill.proficiency_score}</ul>
+                  {/* <ul>{skills.technical_skill.proficiency_score}</ul> */}
                 </div>
               </div>
             </TabPanel>
@@ -131,7 +131,7 @@ export default function Analytics() {
                   Programming Language
                 </span>
                 <div className="bg-[#303030] p-4 rounded-lg text-left ">
-                  {skills.programming_language.name}
+                  {/* {skills.programming_language.name} */}
                 </div>
               </div>
               <div className="w-1/2 flex flex-col">
@@ -140,7 +140,7 @@ export default function Analytics() {
                   Proficiency Score
                 </span>
                 <div className="bg-transparent rounded-lg text-left  overflow-y-auto">
-                  <ul>{skills.programming_language.proficiency_score}</ul>
+                  {/* <ul>{skills.programming_language.proficiency_score}</ul> */}
                 </div>
               </div>
             </TabPanel>
