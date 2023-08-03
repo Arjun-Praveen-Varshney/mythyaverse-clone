@@ -49,9 +49,12 @@ function Dashboard() {
                     location.pathname === "/cvlytic/profile"
                       ? "bg-[#282829]"
                       : ""
-                  } flex items-center my-16 p-4 xl:pl-8 rounded-lg`}
+                  } flex my-16 p-4 xl:pl-8 rounded-lg`}
                 >
-                  <FontAwesomeIcon icon={faUser} className="mr-4" />
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    className="mr-4 text-2xl my-auto"
+                  />
                   Profile
                 </Link>
               </li>

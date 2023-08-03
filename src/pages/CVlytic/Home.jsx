@@ -18,7 +18,6 @@ export default function Home() {
   const navigate = useNavigate();
   const [showJobDescriptionForm, setShowJobDescriptionForm] = useState(false);
   const [isChecked, setisChecked] = useState(false);
-  const [yearsofexperience, setyearsofexperience] = useState("");
   const [selectExperienceLevel, setselectExperienceLevel] = useState("");
   // const [showTooltip, setShowTooltip] = useState(false);
 
@@ -30,8 +29,6 @@ export default function Home() {
     } else if (e.target.name === "job_description") {
       setJobDescription(e.target.files[0]);
       setisChecked(false);
-    } else if (e.target.name === "yearsofexperience") {
-      setyearsofexperience(e.target.value);
     } else if (e.target.name === "selectExperienceLevel") {
       setselectExperienceLevel(e.target.value);
     }
@@ -52,7 +49,14 @@ export default function Home() {
       setLoading(true);
       const data = new FormData();
       data.append("resume", Resume);
-      data.append("job_description", JobDescription);
+      if (JobDescription) {
+        data.append("job_description", JobDescription);
+      } else if (jobDescGenerator && selectExperienceLevel) {
+        data.append("job_title", jobDescGenerator);
+        data.append("experience_level", selectExperienceLevel);
+      } else {
+        console.log("Incomplete data!");
+      }
 
       fetch("https://resume-analyzer.azurewebsites.net/api/analyze", {
         method: "POST",
@@ -66,7 +70,7 @@ export default function Home() {
             const parsedData = {
               ...json,
               personal_info: JSON.parse(json.personal_info),
-              technical_skills: JSON.parse(json.technical_skills),
+              score: JSON.parse(json.score),
             };
             const jsonString = JSON.stringify(parsedData);
             localStorage.setItem("mythyaverseparseddata", jsonString);
@@ -140,12 +144,12 @@ export default function Home() {
                   >
                     Experience
                   </label>
-                  <div className="flex items-center justify-center rounded-full cursor-pointer bg-[#171718]">
+                  <div className="flex items-center w-2/3 justify-center rounded-full cursor-pointer bg-[#171718]">
                     <select
                       required={true}
                       id="selectExperienceLevel"
                       name="selectExperienceLevel"
-                      className="bg-[#171718] text-white outline-none mx-3 py-3 rounded-full"
+                      className="bg-[#171718] text-white outline-none mx-3 py-3 rounded-full w-full"
                       value={selectExperienceLevel}
                       onChange={handleChange}
                     >
@@ -157,18 +161,6 @@ export default function Home() {
                       <option value="Senior Level">Senior Level</option>
                       <option value="Management Level">Management Level</option>
                     </select>
-                  </div>
-                  <div className="flex items-center justify-center rounded-full cursor-pointer bg-[#171718]">
-                    <input
-                      required={true}
-                      placeholder="Enter Years"
-                      className="bg-[#171718] text-white px-4 py-3 w-full h-full rounded-full text-center outline-none"
-                      onChange={handleChange}
-                      id="yearsofexperience"
-                      type="text"
-                      value={yearsofexperience}
-                      name="yearsofexperience"
-                    />
                   </div>
                 </div>
                 {loading ? (

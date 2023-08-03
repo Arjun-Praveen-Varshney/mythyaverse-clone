@@ -1,6 +1,10 @@
 // import { useState } from "react";
 
 const Profile = () => {
+  const jsonString = localStorage.getItem("mythyaverseparseddata");
+  const parsedData = JSON.parse(jsonString);
+  const name = parsedData.personal_info.Name;
+  const contactDetails = parsedData.personal_info["Contact Information"];
   return (
     <div className="flex flex-col w-full pr-10 space-y-8">
       <div>
@@ -11,11 +15,7 @@ const Profile = () => {
       <div className="rounded-3xl border-[1px] border-white text-white p-6 space-y-8">
         <div className="flex items-center">
           <div className="w-1/5 font-semibold">Name:</div>
-          <div className="w-4/5 font-semibold">Name</div>
-        </div>
-        <div className="flex items-center">
-          <div className="w-1/5 font-semibold">Address:</div>
-          <div className="w-4/5">Address</div>
+          <div className="w-4/5 font-semibold">{name}</div>
         </div>
       </div>
       <div>
@@ -24,26 +24,14 @@ const Profile = () => {
         </button>
       </div>
       <div className="rounded-3xl border-[1px] border-white text-white p-6 space-y-8">
-        <div className="flex items-center">
-          <div className="w-1/5 font-semibold">Contact No:</div>
-          <div className="w-4/5">Name</div>
-        </div>
-        <div className="flex items-center">
-          <div className="w-1/5 font-semibold">Email Address1:</div>
-          <div className="w-4/5">Address</div>
-        </div>
-        <div className="flex items-center">
-          <div className="w-1/5 font-semibold">Email Address2:</div>
-          <div className="w-4/5">Address</div>
-        </div>
-        <div className="flex items-center">
-          <div className="w-1/5 font-semibold">Social Link1:</div>
-          <div className="w-4/5">Address</div>
-        </div>
-        <div className="flex items-center">
-          <div className="w-1/5 font-semibold">Social Link2:</div>
-          <div className="w-4/5">Address</div>
-        </div>
+        {Object.entries(contactDetails).map(([key, value]) => {
+          return (
+            <div className="flex items-center" key={key}>
+              <div className="w-1/5 font-semibold">{key}:</div>
+              <div className="w-4/5">{value}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
