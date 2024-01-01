@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <pre>About ZebPay: ZebPay is a secure crypto exchange trusted by over 3 million members globally. It allows users to buy, sell, and trade cryptocurrencies.
+    <pre className="whitespace-pre-line text-white">About ZebPay: ZebPay is a secure crypto exchange trusted by over 3 million members globally. It allows users to buy, sell, and trade cryptocurrencies.
 
 Supported Cryptocurrencies: ZebPay supports trading in Bitcoin, Ethereum, BAT, and over 150 other cryptocurrencies.
 
